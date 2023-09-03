@@ -70,12 +70,12 @@ class FixedFloats():
 
 		num1Decimals = 0
 		num2Decimals = 0
-		outputDecimals = 0  # 3.14 + 3.1415    4 decimals     == 6 . 2815
+		outputDecimals = 0
 		output = 0
 		outputDecimalsVal = 0
 
 		try:
-			num1Decimals = len(str(num1).split(".")[1])  # 3.14: 3 | 14, num1Decimals: 2
+			num1Decimals = len(str(num1).split(".")[1])
 		except:
 			pass
 
@@ -101,7 +101,6 @@ class FixedFloats():
 		if outputDecimalsVal == 0:
 			return int(round(float(num1)-float(num2)))
 		else:
-			# round( num , maxAmountOfDecimals )
 			return round(float(num1)-float(num2), outputDecimals)
 
 if __name__ == "__main__":
